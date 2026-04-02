@@ -30,7 +30,7 @@ Space manipulator의 비홀로노믹 재배향 문제를 **principal fiber bundl
 
 ### Part 1: Nonholonomic 구조의 기하역학적 정리
 
-- [ ] Configuration space 구조 정리: `Q = SO(3) × M`
+- [x] Configuration space 구조 정리: `Q = SO(3) × M`
 - [ ] Connection 방정식 유도: `g⁻¹ġ = -A(r)ṙ`
 - [ ] Falling Cat vs Space Manipulator 구조적 차이 분석
 - [ ] 기존 JGCD 논문 (Reyhanoglu 1992, Cerven 2001, Kubo 2022) 통합 프레임워크 작성

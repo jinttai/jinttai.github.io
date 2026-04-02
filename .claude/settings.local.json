@@ -13,7 +13,8 @@
       "WebFetch(domain:leerob.com)",
       "WebFetch(domain:joshwcomeau.com)",
       "WebFetch(domain:jinttai.github.io)",
-      "WebFetch(domain:alshedivat.github.io)"
+      "WebFetch(domain:alshedivat.github.io)",
+      "Bash(git -C /c/Programs_cjt/my_server add -A && git -C /c/Programs_cjt/my_server diff --cached --stat)"
     ]
   }
 }
