@@ -183,59 +183,6 @@ a:hover { color: var(--accent-hover); }
 }
 .btn:hover { background: var(--accent-hover); color: var(--bg); }
 
-/* ===== Private (Locked) ===== */
-.private-gate {
-  max-width: 400px;
-  margin: 4rem auto;
-  text-align: center;
-}
-
-.private-gate h2 { margin-bottom: 1rem; }
-.private-gate p { color: var(--text-muted); margin-bottom: 1.5rem; }
-
-.private-gate input[type="password"] {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  outline: none;
-}
-.private-gate input[type="password"]:focus { border-color: var(--accent); }
-
-.private-gate button {
-  width: 100%;
-  padding: 0.75rem;
-  background: var(--accent);
-  color: var(--bg);
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.private-gate button:hover { background: var(--accent-hover); }
-
-.private-content { display: none; }
-.private-content.unlocked { display: block; }
-
-.private-entry {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1.25rem;
-  margin-bottom: 1rem;
-}
-.private-entry h3 { margin-bottom: 0.5rem; }
-.private-entry .entry-date { color: var(--text-muted); font-size: 0.85rem; }
-.private-entry p { margin-top: 0.5rem; color: var(--text-muted); }
-
-.error-msg { color: #f85149; font-size: 0.9rem; display: none; margin-bottom: 0.75rem; }
-
 /* ===== Footer ===== */
 .site-footer {
   text-align: center;
