@@ -3,15 +3,170 @@ layout: default
 title: Portfolio
 permalink: /portfolio/
 ---
-<h1>Portfolio</h1>
-<div class="portfolio-grid">
+<!-- Brittany Chiang style: Experience timeline + Project cards -->
+
+<!-- Experience Section -->
+<h2 class="section-title">Experience</h2>
+<div class="experience-list">
+
+  <div class="exp-item">
+    <div class="exp-date">2025.03 — Present</div>
+    <div class="exp-body">
+      <h3>Graduate Research Assistant</h3>
+      <p class="exp-org">Space Mobility & Robotics Laboratory · Seoul National University</p>
+      <ul>
+        <li>Conducting research on trajectory optimization for Free-Floating Space Robots subject to nonholonomic constraints</li>
+        <li>Managing and operating space environment testing facilities, including Thermal Vacuum Chambers</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">MuJoCo</span><span class="tag">CasADi</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">2024.02 — 2025.02</div>
+    <div class="exp-body">
+      <h3>Research Intern</h3>
+      <p class="exp-org">Space Mobility & Robotics Laboratory · Seoul National University</p>
+      <ul>
+        <li>Studied control algorithms for RPOD (Rendezvous, Proximity Operations, and Docking) and space robotics</li>
+        <li>Investigated ISAM (In-space Servicing, Assembly, and Manufacturing)</li>
+        <li>Developed a testbed for ground simulation of space robots</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag">ROS 2</span><span class="tag">MATLAB</span><span class="tag">SolidWorks</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">2023.02 — 2024.10</div>
+    <div class="exp-body">
+      <h3>Student Engineer</h3>
+      <p class="exp-org">Bullnabi (Aerial Robotics Team) · Seoul National University</p>
+      <ul>
+        <li>Implemented trajectory generation algorithms for autonomous flight and landing</li>
+        <li>Designed and manufactured custom drone frames using 3D printing</li>
+        <li>Validated flight control systems using SITL and HITL simulations</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag">PX4</span><span class="tag">Gazebo</span><span class="tag">C++</span><span class="tag">3D Printing</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="exp-item">
+    <div class="exp-date">2023.07 — 2023.09</div>
+    <div class="exp-body">
+      <h3>Research Intern</h3>
+      <p class="exp-org">Extreme Energy Laboratory · Seoul National University</p>
+      <ul>
+        <li>Conducted thermal stability analysis of battery cells using Differential Scanning Calorimetry (DSC)</li>
+        <li>Developed a thermal decomposition model in MATLAB based on the Arrhenius equation</li>
+      </ul>
+      <div class="exp-tags">
+        <span class="tag">MATLAB</span><span class="tag">DSC</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Projects Section -->
+<h2 class="section-title">Projects</h2>
+<div class="project-list">
   {% for item in site.portfolio %}
-  <a href="{{ item.url | relative_url }}" class="portfolio-card" style="color: inherit;">
+  <a href="{{ item.url | relative_url }}" class="project-card" style="color: inherit;">
+    <div class="project-overline">
+      <span class="project-date">{{ item.date_range }}</span>
+      {% if item.status %}<span class="project-status">{{ item.status }}</span>{% endif %}
+    </div>
     <h3>{{ item.title }}</h3>
     <p>{{ item.description }}</p>
-    <div>
+    <div class="exp-tags">
       {% for t in item.tech %}<span class="tech-badge">{{ t }}</span>{% endfor %}
     </div>
   </a>
   {% endfor %}
 </div>
+
+<!-- Publications -->
+<h2 class="section-title">Publications</h2>
+<div class="pub-list">
+  <div class="pub-item">
+    <span class="pub-badge">Journal</span>
+    <p class="pub-citation">Jinhyuk Jang, <strong>Jintae Choi</strong>, and Hyeongjun Park, "Inertia-Free Task-Space Control of Free-Floating Space Manipulators for Orbital Manufacturing Applications," <em>Applied Sciences</em>. <span class="pub-status major">Major Revision</span></p>
+  </div>
+  <div class="pub-item">
+    <span class="pub-badge">Conference</span>
+    <p class="pub-citation"><strong>Jintae Choi</strong> and Hyeongjun Park, "Physics-Informed Generative Path Planning for Free-Floating Space Robot Orientation," <em>Submitted to IFAC 2026</em>. <span class="pub-status review">Under Review</span></p>
+  </div>
+  <div class="pub-item">
+    <span class="pub-badge">Domestic</span>
+    <p class="pub-citation"><strong>Jintae Choi</strong>, Hyeongjun Park, "우주 로봇팔을 이용한 비추력 방식 이동 강화학습 알고리즘," <em>2025년도 우주학술대회</em>, Yeosu, Korea (Jun. 2025) - Oral Presentation</p>
+  </div>
+</div>
+
+<!-- Patents -->
+<h2 class="section-title">Patents</h2>
+<div class="pub-list">
+  <div class="pub-item">
+    <span class="pub-badge">Patent</span>
+    <p class="pub-citation">박형준, 김민형, Patrick Ward, 최진태, "우주 물체 포획 장치", KR-Application No. 10-2025-0013919</p>
+  </div>
+  <div class="pub-item">
+    <span class="pub-badge">Patent</span>
+    <p class="pub-citation">박형준, 장진혁, 최진태, "오프셋 모터 기어트레인과 동심형 유체 로터리 조인트를 갖는 클리노스탯", KR-Application No. 10-2025-0151596</p>
+  </div>
+</div>
+
+<!-- Education -->
+<h2 class="section-title">Education</h2>
+<div class="experience-list">
+  <div class="exp-item">
+    <div class="exp-date">2025.03 — Present</div>
+    <div class="exp-body">
+      <h3>Seoul National University</h3>
+      <p class="exp-org">M.S. in Aerospace Engineering (항공우주공학과) · GPA: 3.65 / 4.3</p>
+    </div>
+  </div>
+  <div class="exp-item">
+    <div class="exp-date">2019.03 — 2025.02</div>
+    <div class="exp-body">
+      <h3>Seoul National University</h3>
+      <p class="exp-org">B.S. in Mechanical & Aerospace Engineering (우주항공공학전공) · GPA: 3.65 / 4.3, Major: 3.76</p>
+    </div>
+  </div>
+</div>
+
+<!-- Skills -->
+<h2 class="section-title">Skills</h2>
+<div class="skills-grid">
+  <div class="skill-group">
+    <h4>Programming</h4>
+    <div class="exp-tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">MATLAB</span></div>
+  </div>
+  <div class="skill-group">
+    <h4>Optimization & AI</h4>
+    <div class="exp-tags"><span class="tag">PyTorch</span><span class="tag">CasADi</span><span class="tag">Gurobi</span></div>
+  </div>
+  <div class="skill-group">
+    <h4>Robotics & Sim</h4>
+    <div class="exp-tags"><span class="tag">ROS 2</span><span class="tag">MuJoCo</span><span class="tag">Gazebo</span><span class="tag">PX4</span></div>
+  </div>
+  <div class="skill-group">
+    <h4>Embedded & HW</h4>
+    <div class="exp-tags"><span class="tag">NVIDIA Jetson</span><span class="tag">Arduino</span><span class="tag">3D Printing</span></div>
+  </div>
+  <div class="skill-group">
+    <h4>Design & CAD</h4>
+    <div class="exp-tags"><span class="tag">SolidWorks</span><span class="tag">Autodesk Inventor</span></div>
+  </div>
+</div>
+
+<!-- Awards -->
+<h2 class="section-title">Awards</h2>
+<ul class="news-list">
+  <li><span class="news-date">2024.09</span> 제 22회 한국로봇항공기 경연대회 우승, 산업통상자원부</li>
+</ul>

@@ -2,33 +2,65 @@
 layout: default
 title: Home
 ---
-<div class="hero">
-  <span class="hero-greeting">Hi, my name is</span>
-  <h1>Jinttai.</h1>
-  <p class="subtitle">I build things for the web.</p>
-  <p>Blog & Portfolio space where I document my journey.</p>
+<!-- al-folio style: About as homepage -->
+<div class="about-section">
+  <div class="about-header">
+    <div class="about-info">
+      <h1>Jintae Choi</h1>
+      <p class="about-role">Master's Student, Aerospace Engineering</p>
+      <p class="about-affiliation">Seoul National University</p>
+      <div class="about-contact">
+        <a href="mailto:chengu1000@snu.ac.kr">chengu1000@snu.ac.kr</a>
+        <span class="contact-sep">&middot;</span>
+        <a href="https://github.com/jinttai">GitHub</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-bio">
+    <p>I am a graduate researcher at the <strong>Space Mobility & Robotics Laboratory</strong>, Seoul National University. My research focuses on <strong>trajectory optimization for free-floating space robots</strong> subject to nonholonomic constraints, combining learning-based motion planning with physics-informed surrogate modeling.</p>
+    <p>I am broadly interested in <strong>space robotics, autonomous systems, and reinforcement learning</strong> for robotic control in extreme environments.</p>
+  </div>
 </div>
 
+<!-- Research Interests -->
+<h2 class="section-title">Research Interests</h2>
+<div class="interests-grid">
+  <div class="interest-card">
+    <h3>Space Robotics & Autonomous Systems</h3>
+    <ul>
+      <li>Learning-based Nonholonomic Motion Planning</li>
+      <li>Physics-Informed Surrogate Modeling</li>
+      <li>Geometric Motion Planning on Manifolds</li>
+      <li>Reinforcement Learning for Space Robots</li>
+    </ul>
+  </div>
+  <div class="interest-card">
+    <h3>Space Environment & Systems</h3>
+    <ul>
+      <li>Thermal Vacuum Chamber Operations</li>
+      <li>Microgravity Experimental Systems</li>
+      <li>Satellite Component Testing</li>
+    </ul>
+  </div>
+</div>
+
+<!-- News / Featured -->
+<h2 class="section-title">News</h2>
+<ul class="news-list">
+  <li><span class="news-date">2025.08</span> Started research on Physics-Informed Generative Path Planning for space robots</li>
+  <li><span class="news-date">2025.06</span> Oral presentation at 2025 Korea Space Conference, Yeosu</li>
+  <li><span class="news-date">2025.03</span> Joined SNU Aerospace Engineering as Master's student</li>
+  <li><span class="news-date">2024.09</span> Won 1st Place at 22nd Korea Robot Aircraft Competition</li>
+</ul>
+
+<!-- Recent Posts -->
 <h2 class="section-title">Recent Posts</h2>
 <ul class="post-list">
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts limit:3 %}
   <li onclick="location.href='{{ post.url | relative_url }}'">
     <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
     <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
-    {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>{% endif %}
   </li>
   {% endfor %}
 </ul>
-
-<h2 class="section-title">Portfolio</h2>
-<div class="portfolio-grid">
-  {% for item in site.portfolio %}
-  <a href="{{ item.url | relative_url }}" class="portfolio-card" style="color: inherit;">
-    <h3>{{ item.title }}</h3>
-    <p>{{ item.description }}</p>
-    <div>
-      {% for t in item.tech %}<span class="tech-badge">{{ t }}</span>{% endfor %}
-    </div>
-  </a>
-  {% endfor %}
-</div>

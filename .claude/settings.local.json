@@ -11,7 +11,9 @@
       "WebFetch(domain:overreacted.io)",
       "WebFetch(domain:leerob.io)",
       "WebFetch(domain:leerob.com)",
-      "WebFetch(domain:joshwcomeau.com)"
+      "WebFetch(domain:joshwcomeau.com)",
+      "WebFetch(domain:jinttai.github.io)",
+      "WebFetch(domain:alshedivat.github.io)"
     ]
   }
 }
