@@ -3,16 +3,19 @@ layout: default
 title: Home
 ---
 <div class="hero">
-  <h1>Jinttai's Space</h1>
-  <p>Blog & Portfolio</p>
+  <span class="hero-greeting">Hi, my name is</span>
+  <h1>Jinttai.</h1>
+  <p class="subtitle">I build things for the web.</p>
+  <p>Blog & Portfolio space where I document my journey.</p>
 </div>
 
 <h2 class="section-title">Recent Posts</h2>
 <ul class="post-list">
   {% for post in site.posts limit:5 %}
-  <li>
+  <li onclick="location.href='{{ post.url | relative_url }}'">
     <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
     <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+    {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 100 }}</p>{% endif %}
   </li>
   {% endfor %}
 </ul>
