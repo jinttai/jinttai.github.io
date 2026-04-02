@@ -1,0 +1,31 @@
+---
+layout: default
+title: Private
+permalink: /private/
+---
+<div class="private-gate">
+  <h2>Private Notes</h2>
+  <p>This section is password-protected.</p>
+  <p id="error-msg" class="error-msg">Incorrect password. Try again.</p>
+  <input type="password" id="private-password" placeholder="Enter password">
+  <button onclick="unlock()">Unlock</button>
+</div>
+
+<div class="private-content">
+  <h1>Private Notes</h1>
+
+  {% assign private_posts = site.posts | where: "category", "private" %}
+  {% for post in private_posts %}
+  <div class="private-entry">
+    <span class="entry-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+  </div>
+  {% endfor %}
+
+  {% if private_posts.size == 0 %}
+  <p style="color: var(--text-muted);">No private notes yet. Add posts with <code>category: private</code> in the front matter.</p>
+  {% endif %}
+</div>
+
+<script src="{{ '/assets/js/private.js' | relative_url }}"></script>

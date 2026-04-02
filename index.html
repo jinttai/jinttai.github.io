@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+<div class="hero">
+  <h1>Jinttai's Space</h1>
+  <p>Blog, Portfolio, and Personal Notes</p>
+</div>
+
+<h2 class="section-title">Recent Posts</h2>
+<ul class="post-list">
+  {% for post in site.posts limit:5 %}
+  <li>
+    <span class="post-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+    <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2 class="section-title">Portfolio</h2>
+<div class="portfolio-grid">
+  {% for item in site.portfolio %}
+  <a href="{{ item.url | relative_url }}" class="portfolio-card" style="color: inherit;">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+    <div>
+      {% for t in item.tech %}<span class="tech-badge">{{ t }}</span>{% endfor %}
+    </div>
+  </a>
+  {% endfor %}
+</div>

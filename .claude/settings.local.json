@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(which ruby:*)",
+      "Bash(git --version && gh auth status 2>&1)",
+      "Bash(git init:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+---
+layout: default
+title: Portfolio
+permalink: /portfolio/
+---
+<h1>Portfolio</h1>
+<div class="portfolio-grid">
+  {% for item in site.portfolio %}
+  <a href="{{ item.url | relative_url }}" class="portfolio-card" style="color: inherit;">
+    <h3>{{ item.title }}</h3>
+    <p>{{ item.description }}</p>
+    <div>
+      {% for t in item.tech %}<span class="tech-badge">{{ t }}</span>{% endfor %}
+    </div>
+  </a>
+  {% endfor %}
+</div>
