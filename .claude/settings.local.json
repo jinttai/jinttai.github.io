@@ -8,7 +8,10 @@
       "Bash(gh api:*)",
       "WebFetch(domain:taniarascia.com)",
       "WebFetch(domain:brittanychiang.com)",
-      "WebFetch(domain:overreacted.io)"
+      "WebFetch(domain:overreacted.io)",
+      "WebFetch(domain:leerob.io)",
+      "WebFetch(domain:leerob.com)",
+      "WebFetch(domain:joshwcomeau.com)"
     ]
   }
 }
